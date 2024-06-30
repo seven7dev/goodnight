@@ -24,8 +24,9 @@
 
 
 body{
-    
+    background: url('/assets/bg.png');
     background-color: rgb(0, 0, 0);
+    background-size: cover;
 }
 
 
@@ -51,6 +52,7 @@ video{
     font-family: r;
     color: white;
     transition: 0.3s;
+    perspective: 1000px; /* Para dar um efeito 3D */
 }
 
 .profile {
@@ -115,6 +117,13 @@ border-style: double;
     font-size: 50px;
     margin-top: 80px;
     color: white;
+    flex-direction: column;
+}
+
+.title .frase{
+    font-size: 18px;
+    opacity: 0.5;
+    font-family: r;
 }
 
 .discord{
@@ -158,3 +167,4 @@ border-style: double;
         text-align: center;
     }
 }
+
