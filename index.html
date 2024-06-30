@@ -3,18 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>goodnight'7</title>
+    <title></title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="/assets/icon.png">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const titleText = "goodnight'7";
+            let index = 0;
+            let direction = 1;
+
+            function updateTitle() {
+                document.title = titleText.slice(0, index);
+                index += direction;
+
+                if (index > titleText.length) {
+                    direction = -1;
+                    index = titleText.length - 1;
+                } else if (index === 1 && direction === -1) {
+                    direction = 1;
+                }
+
+                setTimeout(updateTitle, 200);
+            }
+
+            updateTitle();
+        });
+    </script>
 </head>
 <body>
     
-    <video onloadstart="this.volume=0.1 this.play()" autoplay loop>
-        <source id="video" src="/assets/video.mp4" type="video/mp4">
-    </video>
+    <audio autoplay onloadstart="this.volume=0.1" loop>
+        <source id="video" src="/assets/audio.mp3" type="audio/mp3">
+    </audio>
 
     <div class="title">
         <p>good<span style="color: rgb(99, 99, 99);">night'7</span></p>
+        <p class="frase">"goodnight menina, adorei sua cara de cretina"</p>
     </div>
 
     <div class="container-cards">
@@ -34,7 +58,7 @@
             </div>
             <div class="container-dc">
                 <div style="padding-top: 17px;" class="discord">
-                    <a href="https://discord.com/users/911516309215395860" target="_blank"><img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="DiscordBoost" width="30px"></a>
+                    <a href="https://discord.com/users/911516309215395860" target="_blank"><img src="assets/dc.png" alt="DiscordBoost" width="30px"></a>
                 </div>
             </div>
         </div>
@@ -54,7 +78,7 @@
             </div>
             <div class="container-dc">
                 <div style="padding-top: 17px;" class="discord">
-                    <a href="https://discord.com/users/1226516675168309279" target="_blank"><img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="DiscordBoost" width="30px"></a>
+                    <a href="https://discord.com/users/1226516675168309279" target="_blank"><img src="assets/dc.png" alt="DiscordBoost" width="30px"></a>
                 </div>
             </div>
         </div>
@@ -74,7 +98,7 @@
             </div>
             <div class="container-dc">
                 <div style="padding-top: 17px;" class="discord">
-                    <a href="https://discord.com/users/821129417178349638" target="_blank"><img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="DiscordBoost" width="30px"></a>
+                    <a href="https://discord.com/users/821129417178349638" target="_blank"><img src="assets/dc.png" alt="DiscordBoost" width="30px"></a>
                 </div>
             </div>
         </div>
@@ -94,7 +118,7 @@
             </div>
             <div class="container-dc">
                 <div style="padding-top: 17px;" class="discord">
-                    <a href="https://discord.com/users/1163610535456153630" target="_blank"><img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="DiscordBoost" width="30px"></a>
+                    <a href="https://discord.com/users/1163610535456153630" target="_blank"><img src="assets/dc.png" alt="DiscordBoost" width="30px"></a>
                 </div>
             </div>
         </div>
@@ -104,6 +128,8 @@
 
         <script>
             document.addEventListener('contextmenu', event => event.preventDefault());  
+
+
         </script>
 
 </body>
